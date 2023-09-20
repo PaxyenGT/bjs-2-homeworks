@@ -24,7 +24,7 @@ Student.prototype.setSubject = function (subjectName) {
 
 ### Пример:
 ```js
-let student1 = new Student("Василиса", "женский", 19);
+let student1 = new Student("Василиса","женский", 19);
 student1.setSubject("Algebra");
 console.log(student1.getAverage()); // 0
 student1.addMarks(4, 5, 4, 5);
