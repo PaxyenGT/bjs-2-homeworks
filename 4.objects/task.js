@@ -10,15 +10,19 @@ Student.prototype.setSubject = function (subjectName) {
 }
 
 Student.prototype.addMarks = function (...marksToAdd) { 
-    if("marks" in student1 || student2){
-        marksToAdd.forEach((item) => { return this.marks.push(item)})
-    } else { return this.marks = undefined }
+    if("marks" in this.marks){
+        marksToAdd.forEach((item) => this.marks.push(item))
+    }
 }
 
 Student.prototype.getAverage = function () {
-    if (this.marks.length > 0) {
-    return this.marks.reduce((acc, el) => acc + el / this.marks.length, 0)
-    } else { return 0; }
+    if ("marks" in this.marks) {
+      if (this.marks.length > 0) {
+      return this.marks.reduce((acc, el) => acc + el / this.marks.length, 0)
+      } else { 
+          return 0; 
+      }
+    }
 }
 
 
