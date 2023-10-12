@@ -50,6 +50,3 @@ class AlarmClock {
         this.alarmCollection = [];
     }
 } 
-
-let clock = new AlarmClock();
-const callback = setTimeout(f => f, 1000);
